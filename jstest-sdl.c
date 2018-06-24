@@ -39,6 +39,7 @@
 // 02111-1307, USA.
 ///////////////////////////////////////////////////////////////////////////////
 
+#define SDL_MAIN_HANDLED
 #include <SDL.h>
 #include <assert.h>
 #include <curses.h>
@@ -549,7 +550,7 @@ void test_rumble(int joy_idx) {
 
 
 /* main() ********************************************************************/
-int main(int argc, char** argv) {
+int main(int argc, char* argv[]) {
     if (argc == 1) {
         print_help(argv[0]);
         exit(1);
